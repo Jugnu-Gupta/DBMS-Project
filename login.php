@@ -2,7 +2,7 @@
     include('components/connection.php');
 
     session_start();
-
+    
     if(isset($_SESSION['user_id'])){
         $user_id = $_SESSION['user_id'];
     }
@@ -16,38 +16,15 @@
         $email = filter_var($email, FILTER_SANITIZE_STRING);
         $pass = $_POST['pass'];
         $pass = filter_var($pass, FILTER_SANITIZE_STRING);
-        echo $email."<br>".$pass."<br> inputs";
+        // echo $email."<br>".$pass."<br> inputs";
 
-        $sql = "select * from `users` where email = .$email and password = `$pass`";
+        $sql = "select * from users where email = '$email' and password = '$pass';";
         $select_user = mysqli_query($conn, $sql);
         $rows = mysqli_fetch_all($select_user, MYSQLI_ASSOC);
-        // $select_user = $conn->query($sql);
-        
-        // $select_user = $conn->prepare("select * from `users` where email = ? and password = ?");
-        // $select_user->execute([$email, $pass]);
-        // $row = $select_user->fetch(PDO::FETCH_ASSOC);
-        
-        // $temp = $conn->prepare("select * from `users` where password = ?;");
-        // $temp->execute([$pass]);
-        // $temp = $temp->fetchAll(PDO::FETCH_ASSOC);
-        // foreach($temp as $t){
-        //     echo "pass <br>".$t['id']."<br>".$t['name']."<br>".$t['email']."<br>".$t['password']."<br>".strlen($t['password'])."<br>";
-        // }
-
-
-        // $temp2 = $conn->prepare("select * from `users` where email = ?;");
-        // $temp2->execute([$email]);
-        // $temp2 = $temp2->fetchAll(PDO::FETCH_ASSOC);
-        // foreach($temp2 as $t){
-        //     echo "email <br>".$t['id']."<br>".$t['name']."<br>".$t['email']."<br>".$t['password']."<br>".strlen($t['password'])."<br>";
-        // }
-
-
-
         if(count($rows) > 0){
-            $_SESSION['user_id'] = $row['id'];
-            // header('location:home.php');
-            $message[] = 'Login Successful';
+            $_SESSION['user_id'] = $rows[0]['id'];
+            header('location:home.php');
+            // $message[] = 'Login Successful!';
         }
         else{
             $message[] = 'Incorrect email or password!';

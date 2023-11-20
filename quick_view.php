@@ -43,25 +43,24 @@
 
         <h1 class="title">Quick View</h1>
 
-
     <?php
-    $pid = $_GET['pid'];
-        $select_products = $conn->prepare("SELECT * FROM `products` where id = ?");
-        $select_products->execute([$pid]);
-        if(count($select_products->fetchAll(PDO::FETCH_ASSOC)) > 0){
-        // if($select_products->rowCount() > 0){
-        while($fetch_products = $select_products->fetch(PDO::FETCH_ASSOC)){
+        $pid = $_GET['pid'];
+        $sql = "SELECT * FROM `products` where id = '$pid';";
+        $select_products = mysqli_query($conn, $sql);
+        $fetch_products = mysqli_fetch_all($select_products, MYSQLI_ASSOC);
+        if(count($fetch_products) > 0){
+            for ($i = 0; $i < count($fetch_products); $i++) {
     ?>
     <form action="" method="post" class="box">
-        <input type="hidden" name="pid" value="<?= $fetch_products['id']; ?>">
-        <input type="hidden" name="name" value="<?= $fetch_products['name']; ?>">
-        <input type="hidden" name="price" value="<?= $fetch_products['price']; ?>">
-        <input type="hidden" name="image" value="<?= $fetch_products['image']; ?>">
-        <img src="uploaded_img/<?= $fetch_products['image']; ?>" alt="">
-        <a href="category.php?category=<?= $fetch_products['category']; ?>" class="cat"><?= $fetch_products['category']; ?></a>
-        <div class="name"><?= $fetch_products['name']; ?></div>
+        <input type="hidden" name="pid" value="<?= $fetch_products[$i]['id']; ?>">
+        <input type="hidden" name="name" value="<?= $fetch_products[$i]['name']; ?>">
+        <input type="hidden" name="price" value="<?= $fetch_products[$i]['price']; ?>">
+        <input type="hidden" name="image" value="<?= $fetch_products[$i]['image']; ?>">
+        <img src="uploaded_img/<?= $fetch_products[$i]['image']; ?>" alt="">
+        <a href="category.php?category=<?= $fetch_products[$i]['category']; ?>" class="cat"><?= $fetch_products[$i]['category']; ?></a>
+        <div class="name"><?= $fetch_products[$i]['name']; ?></div>
         <div class="flex">
-            <div class="price"><span>$</span><?= $fetch_products['price']; ?></div>
+            <div class="price"><span>$</span><?= $fetch_products[$i]['price']; ?></div>
             <input type="number" name="qty" class="qty" min="1" max="99" value="1" maxlength="2">
         </div>
         <button type="submit" class="cart-btn" name="add_to_cart">Add To Cart</button>

@@ -71,6 +71,7 @@ CREATE TABLE `messages` (
   `message` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+
 -- --------------------------------------------------------
 
 --
@@ -104,6 +105,13 @@ CREATE TABLE `products` (
   `price` int(10) NOT NULL,
   `image` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+insert into `products`(`id`, `name`, `category`, `price`, `image`) values
+(1, "chicken burger", "fast food", 40, "burger-1.png"),
+(2, "Veg loaded pizza", "fast food", 50, "pizza-5.png"),
+(3, "Beefsteak", "main dish", 70, "dish-4.png"),
+(4, "cold coffee", "drink", 20, "drink-2.png"),
+(5, "choco lava cake", "dessert", 30, "dessert-4.png"),
+(6, "veg. burger", "fast food", 25, "burger-2.png");  
 
 -- --------------------------------------------------------
 
@@ -119,6 +127,7 @@ CREATE TABLE `users` (
   `password` varchar(50) NOT NULL,
   `address` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+insert into `users`( `id`, `name`, `email`, `number`, `password`) values(2,"Jugnu Gupta", "jugnnugupta@gmail.com", "1234567890","12345");
 
 --
 -- Indexes for dumped tables
@@ -180,7 +189,7 @@ ALTER TABLE `cart`
 -- AUTO_INCREMENT for table `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
+MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `orders`

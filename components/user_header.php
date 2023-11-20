@@ -8,10 +8,9 @@
                 </div>';
         }
     }
-    else{
-        $user_id = '';
-    }
-    // echo $_SESSION['user_id'];
+    // else{
+    //     $user_id = '';
+    // }
 ?>
 
 <!-- header section -->
@@ -29,10 +28,10 @@
 
         <div class="icons">
             <?php
-                    $count_user_cart_items = $conn->prepare("Select * from `cart`
-                    where id = ?");
-                    $count_user_cart_items->execute([$user_id]);
-                    $total_user_cart_items = $count_user_cart_items->rowCount();
+                    $sql = "select * from cart where id = '$user_id';";
+                    $response = mysqli_query($conn, $sql);
+                    $count_user_cart_items = mysqli_fetch_all($response, MYSQLI_ASSOC);
+                    $total_user_cart_items = count($count_user_cart_items);
                 ?>
             <a href="search.php"><i class="fa-solid fa-magnifying-glass"></i></a>
             <a href="cart.php"><i class="fa-solid fa-cart-shopping"></i><span>(<?php echo $total_user_cart_items; ?>)</span></a>
@@ -42,23 +41,12 @@
 
         <div class="profile">
             <?php
-                $select_profile = $conn->prepare("select * from `users` where id = ?");
-                $select_profile->execute([$user_id]);
-                if(count($select_profile->fetchAll(PDO::FETCH_ASSOC)) > 0){
-                    // if($select_profile->rowCount() > 0){
-                    // $fetch_profile = $select_profile->fetch(PDO::FETCH_ASSOC);
-                    //     echo $fetch_profile['id']."<br>".$fetch_profile['name']."<br>".$fetch_profile['password'];
-                    $fetch_profile = $select_profile->fetch(PDO::FETCH_ASSOC);
-
-// Check if $fetch_profile is an array before accessing its elements
-if (is_array($fetch_profile)) {
-    echo $fetch_profile['id'] . "<br>" . $fetch_profile['name'] . "<br>" . $fetch_profile['password'];
-} else {
-    // Handle the case where the query didn't return an array
-    echo "Query failed or no result";
-}
+                $sql = "select * from users where id = '$user_id';";
+                $select_profile = mysqli_query($conn, $sql);
+                $select_profile = mysqli_fetch_all($select_profile, MYSQLI_ASSOC);
+                if(count($select_profile) > 0){
             ?>
-            <p class="name"><?= $fetch_profile['name']; ?></p>
+            <p class="name"><?= $select_profile[0]['name']; ?></p>
             <div class="flex">
                 <a href="profile.php" class="btn">Profile</a>
                 <a href="components/user_logout.php" onclick="return confirm('logout from this website?');"
