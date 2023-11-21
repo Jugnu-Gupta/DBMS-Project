@@ -61,9 +61,7 @@
             
             <div class="content">
                 <h3>Why choose us?</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, neque debitis incidunt qui ipsum
-                    sed doloremque a molestiae in veritatis ullam similique sunt aliquam dolores dolore? Quasi atque
-                    debitis nobis!</p>
+                <p>At Food dash, we invite you to indulge in an unparalleled dining experience marked by excellence at every turn. Our commitment to culinary mastery is evident in each dish, meticulously crafted with passion and flair. The ambiance is a harmonious fusion of modern elegance and warm hospitality, creating the perfect backdrop for intimate gatherings and celebrations. We take pride in our dedication to using fresh, locally-sourced ingredients, ensuring a farm-to-table experience that is both flavorful and sustainable. What sets us apart is not just our innovative menu, evolving with culinary trends, but also our unwavering dedication to personalized service. Every visit is a bespoke culinary journey, tailored to your preferences. Beyond the dining table, we are champions of sustainability, from eco-friendly practices to minimizing food waste. Elevate your special occasions with our expert event planning and catering services, creating moments that linger on the palate and in memory. Don't just dine; join a community that celebrates exceptional culinary experiences at Food dash.</p>
                     <a href="menu.php" class="btn">our menu</a>
             </div>
             
@@ -82,20 +80,17 @@
 
             <div class="box">
                 <img src="images/step-1.png" alt="">
-                <h3>choose order</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt, dolorem.</p>
+                <h3>Choose order</h3>
             </div>
             
             <div class="box">
                 <img src="images/step-2.png" alt="">
-                <h3>fast delivery</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt, dolorem.</p>
+                <h3>Fast delivery</h3>
             </div>
             
             <div class="box">
                 <img src="images/step-3.png" alt="">
-                <h3>enjoy food</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt, dolorem.</p>
+                <h3>Enjoy food</h3>
             </div>
 
         </div>
@@ -106,7 +101,7 @@
     <!-- reviews section  -->
     <section class="reviews">
 
-        <h1 class="title">customer's reivews</h1>
+        <h1 class="title">Customer's reviews</h1>
         
         <div class="swiper reviews-slider">
             
@@ -114,8 +109,7 @@
 
                 <div class="swiper-slide slide">
                     <img src="images/pic-1.png" alt="">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos voluptate eligendi laborum
-                        molestias ut earum nulla sint voluptatum labore nemo.</p>
+                    <h3>john deo</h3>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -123,13 +117,12 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star-half-alt"></i>
                     </div>
-                    <h3>john deo</h3>
+                    <p>"Who knew flavor could have a party in my mouth? Dining at Food Dash was like a culinary adventure! The menu is a treasure map, and every dish is a delicious discovery. I'm still dreaming about the unexpected combinations. Bravo!"</p>
                 </div>
                 
                 <div class="swiper-slide slide">
                     <img src="images/pic-2.png" alt="">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos voluptate eligendi laborum
-                        molestias ut earum nulla sint voluptatum labore nemo.</p>
+                    <h3>john deo</h3>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -137,27 +130,12 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star-half-alt"></i>
                     </div>
-                    <h3>john deo</h3>
-                </div>
-
-                <div class="swiper-slide slide">
-                    <img src="images/pic-3.png" alt="">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos voluptate eligendi laborum
-                        molestias ut earum nulla sint voluptatum labore nemo.</p>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <h3>john deo</h3>
+                    <p>"I don't usually write reviews, but Food Dash deserves a standing ovation. The staff treated us like royalty, and the food was a symphony of taste. It's official; I'm their number one fan. Can't wait to bring all my friends here!"</p>
                 </div>
 
                 <div class="swiper-slide slide">
                     <img src="images/pic-4.png" alt="">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos voluptate eligendi laborum
-                        molestias ut earum nulla sint voluptatum labore nemo.</p>
+                    <h3>john deo</h3>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -165,13 +143,12 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star-half-alt"></i>
                     </div>
-                    <h3>john deo</h3>
+                    <p>"Food Dash is my happy place. The food is so good; I almost wanted to order a second stomach. From the first bite to the last, every flavor danced on my taste buds. And the desserts? Pure joy on a plate!"</p>
                 </div>
 
                 <div class="swiper-slide slide">
                     <img src="images/pic-5.png" alt="">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos voluptate eligendi laborum
-                        molestias ut earum nulla sint voluptatum labore nemo.</p>
+                    <h3>john deo</h3>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -179,21 +156,20 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star-half-alt"></i>
                     </div>
-                    <h3>john deo</h3>
+                    <p>"I've decided to move into Food Dash. I mean, why not? The staff is like a bunch of culinary wizards, and the atmosphere is so cozy. I asked for recommendations, and they practically created a personalized menu just for me. Can't wait to go back!"</p>
                 </div>
 
                 <div class="swiper-slide slide">
                     <img src="images/pic-6.png" alt="">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos voluptate eligendi laborum
-                        molestias ut earum nulla sint voluptatum labore nemo.</p>
-                        <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
                     <h3>john deo</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                    <p>"As a self-proclaimed food critic (in my own kitchen), Food Dash passed my rigorous standards with flying colors. The attention to detail, the presentation, the flavors—every element is a work of culinary art. Highly recommend!"</p>
                 </div>
 
             </div>

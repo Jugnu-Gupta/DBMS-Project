@@ -102,10 +102,7 @@
                     $sql = "SELECT * FROM cart WHERE user_id = '$user_id';";
                     $select_cart = mysqli_query($conn, $sql);
                     $fetch_cart = mysqli_fetch_all($select_cart, MYSQLI_ASSOC);
-                    // $select_cart = $conn->prepare("SELECT * FROM `cart` WHERE user_id = ?");
-                    // $select_cart->execute([$user_id]);
                     if(count($fetch_cart) > 0){
-                        // while($fetch_cart = $select_cart->fetch(PDO::FETCH_ASSOC)){
                         for($i = 0; $i < count($fetch_cart); $i++){
                             $cart_items[] = $fetch_cart[$i]['name'].' ('.$fetch_cart[$i]['price'].' x '. $fetch_cart[$i]['quantity'].') - ';
                             $total_products = implode($cart_items);

@@ -581,7 +581,6 @@ section{
 .reviews .slide .stars{
     display: inline-block;
     padding:.5rem 1.5rem;
-    border:var(--border);
 }
 
 .reviews .slide .stars i{

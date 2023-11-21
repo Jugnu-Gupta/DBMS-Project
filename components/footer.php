@@ -10,7 +10,7 @@
         <div class="box">
             <img src="images/clock-icon.png" alt="">
             <h3>opening hours</h3>
-            <p>10:30am to 10:30pm</p>
+            <p>Mon-Sat: 11AM - 12PM <br> Sunday: Closed</p>
         </div>
 
         <div class="box">

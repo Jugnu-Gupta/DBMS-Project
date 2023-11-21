@@ -12,7 +12,7 @@
 
 <header class="header">
     <section class="flex">
-        <a href="home.php" class="logo">Food Dash 😋</a>
+        <a href="home.php" class="logo">Food Dash</a>
 
         <nav class="navbar">
             <a href="home.php">home</a>
