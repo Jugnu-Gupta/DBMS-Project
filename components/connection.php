@@ -1,12 +1,4 @@
 <?php
-    // $servername = "localhost";
-    // $username = "root";
-    // $password = "root";
-    // $db_name = "food_db";
-    // $port = 3307;
-
-    // $conn = new PDO("mysql:host=$servername;dbname=$db_name;port=$port", $username, $password);
-
     $servername = "localhost";
     $username = "root";
     $password = "root";

@@ -8,9 +8,6 @@
                 </div>';
         }
     }
-    // else{
-    //     $user_id = '';
-    // }
 ?>
 
 <!-- header section -->
@@ -34,7 +31,7 @@
                     $total_user_cart_items = count($count_user_cart_items);
                 ?>
             <a href="search.php"><i class="fa-solid fa-magnifying-glass"></i></a>
-            <a href="cart.php"><i class="fa-solid fa-cart-shopping"></i><span>(<?php echo $total_user_cart_items; ?>)</span></a>
+            <a href="cart.php"><i class="fa-solid fa-cart-shopping"></i><span>(<?= $total_user_cart_items; ?>)</span></a>
             <div id="user-btn" onclick="userBtnClickHandler()" class="fa-solid fa-user"></div>
             <div id="menu-btn" onclick="menuBtnClickHandler()" class="fa-solid fa-bars"></div>
         </div>
@@ -43,10 +40,10 @@
             <?php
                 $sql = "select * from users where id = '$user_id';";
                 $select_profile = mysqli_query($conn, $sql);
-                $select_profile = mysqli_fetch_all($select_profile, MYSQLI_ASSOC);
-                if(count($select_profile) > 0){
+                $fetch_profile = mysqli_fetch_all($select_profile, MYSQLI_ASSOC);
+                if(count($fetch_profile) > 0){
             ?>
-            <p class="name"><?= $select_profile[0]['name']; ?></p>
+            <p class="name"><?= $fetch_profile[0]['name']; ?></p>
             <div class="flex">
                 <a href="profile.php" class="btn">Profile</a>
                 <a href="components/user_logout.php" onclick="return confirm('logout from this website?');"

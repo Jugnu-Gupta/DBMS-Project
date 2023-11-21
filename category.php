@@ -9,6 +9,8 @@
     else{
         $user_id = '';
     }
+
+    include 'components/add_cart.php';
 ?>
 
 <!DOCTYPE html>
@@ -74,9 +76,10 @@
             </form>
             <?php
                 }
-            }else{
-                    echo '<p class="empty">no products added yet!</p>';
-                }
+            }
+            else{
+                echo '<p class="empty">no products added yet!</p>';
+            }
             ?>
         </div>
     </section>
@@ -85,12 +88,7 @@
 
 
 
-
         <?php include('components/footer.php'); ?>
-
-
-
-
 
 
 

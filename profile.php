@@ -44,24 +44,21 @@
     <section class="user-details">
 
         <div class="user">
-            <!-- <?html
-              
-              ?> -->
             <img src="images/user-icon.png" alt="">
             <p><i class="fas fa-user"></i><span><span>
-                        Jugnu Gupta
+            <?= $fetch_profile[0]['name']; ?>
                     </span></span></p>
             <p><i class="fas fa-phone"></i><span>
-                1234567890
+            <?= $fetch_profile[0]['number']; ?>
             </span></p>
             <p><i class="fas fa-envelope"></i><span>
-                jugnugupta@gmail.com
+            <?= $fetch_profile[0]['email']; ?>
             </span></p>
-            <a href="update_profile.php" class="btn">update info</a>
+            <a href="update_profile.php" class="btn">Update info</a>
             <p class="address"><i class="fas fa-map-marker-alt"></i><span>
-                falt no. 1, building no. 1, narela, delhi - 110040
+            <?php if($fetch_profile[0]['address'] == ''){echo 'Please enter your address!!';}else{echo $fetch_profile[0]['address'];} ?>
             </span></p>
-            <a href="update_address.php" class="btn">update address</a>
+            <a href="update_address.php" class="btn">Update address</a>
         </div>
         
     </section>

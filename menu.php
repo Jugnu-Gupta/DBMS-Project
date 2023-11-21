@@ -9,6 +9,8 @@
     else{
         $user_id = '';
     }
+
+    include 'components/add_cart.php';
 ?>
 
 <!DOCTYPE html>
@@ -47,148 +49,51 @@
         <h3>our menu</h3>
         <p><a href="home.php">home</a> <span> / menu</span></p>
     </div>
-
     
     
     <!-- menu section  -->
-    
-    <!-- home section -->
-    <section class="products">
-        <h1 class="title">latest disher</h1>
+<section class="products">
 
-        <div class="box-container">
-            
-            <form action="" method="post" class="box">
-                <button type="button" class="fa-solid fa-eye" name="quick_view"></button>
-                <button type="button" class="fa-solid fa-cart-shopping" name="add_to_cart"></button>
-                <img src="uploaded_img/burger-1.png" alt="">
-                <a href="#" class="cat">fast food</a>
-                <div class="name">chezzy burger 01</div>
-                <div class="flex">
-                    <div class="price"><span>$</span>3</div>
-                    <input type="number" name="qty" class="qty" min="1" max="99" value="1"
-                    onkeypress="if(this.value.length==2) return false;">
-                </div>
-            </form>
+<h1 class="title">latest dishes</h1>
 
-            <form action="" method="post" class="box">
-                <button type="button" class="fa-solid fa-eye" name="quick_view"></button>
-                <button type="button" class="fa-solid fa-cart-shopping" name="add_to_cart"></button>
-                <img src="uploaded_img/dish-1.png" alt="">
-                <a href="#" class="cat">dishes</a>
-                <div class="name">main dish 01</div>
-                <div class="flex">
-                    <div class="price"><span>$</span>3</div>
-                    <input type="number" name="qty" class="qty" min="1" max="99" value="1"
-                    onkeypress="if(this.value.length==2) return false;">
-                </div>
-            </form>
-
-            <form action="" method="post" class="box">
-                <button type="button" class="fa-solid fa-eye" name="quick_view"></button>
-                <button type="button" class="fa-solid fa-cart-shopping" name="add_to_cart"></button>
-                <img src="uploaded_img/dessert-1.png" alt="">
-                <a href="#" class="cat">desserts</a>
-                <div class="name">delicious dessert 01</div>
-                <div class="flex">
-                    <div class="price"><span>$</span>3</div>
-                    <input type="number" name="qty" class="qty" min="1" max="99" value="1"
-                        onkeypress="if(this.value.length==2) return false;">
-                    </div>
-            </form>
-
-            <form action="" method="post" class="box">
-                <button type="button" class="fa-solid fa-eye" name="quick_view"></button>
-                <button type="button" class="fa-solid fa-cart-shopping" name="add_to_cart"></button>
-                <img src="uploaded_img/drink-1.png" alt="">
-                <a href="#" class="cat">drinks</a>
-                <div class="name">cold drink 01</div>
-                <div class="flex">
-                    <div class="price"><span>$</span>3</div>
-                    <input type="number" name="qty" class="qty" min="1" max="99" value="1"
-                        onkeypress="if(this.value.length==2) return false;">
-                </div>
-            </form>
-            
-            <form action="" method="post" class="box">
-                <button type="button" class="fa-solid fa-eye" name="quick_view"></button>
-                <button type="button" class="fa-solid fa-cart-shopping" name="add_to_cart"></button>
-                <img src="uploaded_img/pizza-1.png" alt="">
-                <a href="#" class="cat">fast food</a>
-                <div class="name">delicious pizza 01</div>
-                <div class="flex">
-                    <div class="price"><span>$</span>3</div>
-                    <input type="number" name="qty" class="qty" min="1" max="99" value="1"
-                        onkeypress="if(this.value.length==2) return false;">
-                    </div>
-            </form>
-
-            <form action="" method="post" class="box">
-                <button type="button" class="fa-solid fa-eye" name="quick_view"></button>
-                <button type="button" class="fa-solid fa-cart-shopping" name="add_to_cart"></button>
-                <img src="uploaded_img/dish-2.png" alt="">
-                <a href="#" class="cat">dishes</a>
-                <div class="name">main dish 02</div>
-                <div class="flex">
-                    <div class="price"><span>$</span>3</div>
-                    <input type="number" name="qty" class="qty" min="1" max="99" value="1"
-                    onkeypress="if(this.value.length==2) return false;">
-                </div>
-            </form>
-
-            <form action="" method="post" class="box">
-                <button type="button" class="fa-solid fa-eye" name="quick_view"></button>
-                <button type="button" class="fa-solid fa-cart-shopping" name="add_to_cart"></button>
-                <img src="uploaded_img/pizza-2.png" alt="">
-                <a href="#" class="cat">fast food</a>
-                <div class="name">delicious pizza 02</div>
-                <div class="flex">
-                    <div class="price"><span>$</span>3</div>
-                    <input type="number" name="qty" class="qty" min="1" max="99" value="1"
-                    onkeypress="if(this.value.length==2) return false;">
-                </div>
-            </form>
-            
-            <form action="" method="post" class="box">
-                <button type="button" class="fa-solid fa-eye" name="quick_view"></button>
-                <button type="button" class="fa-solid fa-cart-shopping" name="add_to_cart"></button>
-                <img src="uploaded_img/dessert-2.png" alt="">
-                <a href="#" class="cat">desserts</a>
-                <div class="name">delicious dessert 02</div>
-                <div class="flex">
-                    <div class="price"><span>$</span>3</div>
-                    <input type="number" name="qty" class="qty" min="1" max="99" value="1"
-                        onkeypress="if(this.value.length==2) return false;">
-                </div>
-            </form>
-
-            <form action="" method="post" class="box">
-                <button type="button" class="fa-solid fa-eye" name="quick_view"></button>
-                <button type="button" class="fa-solid fa-cart-shopping" name="add_to_cart"></button>
-                <img src="uploaded_img/drink-2.png" alt="">
-                <a href="#" class="cat">drinks</a>
-                <div class="name">cold drink 02</div>
-                <div class="flex">
-                    <div class="price"><span>$</span>3</div>
-                    <input type="number" name="qty" class="qty" min="1" max="99" value="1"
-                    onkeypress="if(this.value.length==2) return false;">
-                </div>
-            </form>
+<div class="box-container">
+    <?php
+        $sql = "SELECT * FROM products;";
+        $select_products = mysqli_query($conn, $sql);
+        $fetch_products = mysqli_fetch_all($select_products, MYSQLI_ASSOC);
+        if(count($fetch_products) > 0){
+            for ($i = 0; $i < count($fetch_products); $i++) {
+    ?>
+    <form action="" method="post" class="box">
+        <input type="hidden" name="pid" value="<?= $fetch_products[$i]['id']; ?>">
+        <input type="hidden" name="name" value="<?= $fetch_products[$i]['name']; ?>">
+        <input type="hidden" name="price" value="<?= $fetch_products[$i]['price']; ?>">
+        <input type="hidden" name="image" value="<?= $fetch_products[$i]['image']; ?>">
+        <a href="quick_view.php?pid=<?= $fetch_products[$i]['id']; ?>" class="fas fa-eye"></a>
+        <button type="submit" class="fas fa-cart-shopping" name="add_to_cart"></button>
+        <img src="uploaded_img/<?= $fetch_products[$i]['image']; ?>" alt="">
+        <a href="category.php?category=<?= $fetch_products[$i]['category']; ?>" class="cat"><?= $fetch_products[$i]['category']; ?></a>
+        <div class="name"><?= $fetch_products[$i]['name']; ?></div>
+        <div class="flex">
+        <div class="price"><span>$</span><?= $fetch_products[$i]['price']; ?></div>
+        <input type="number" name="qty" class="qty" min="1" max="99" value="1" maxlength="2">
         </div>
+    </form>
+    <?php
+        }
+    }else{
+        echo '<p class="empty">no products added yet!</p>';
+    }
+    ?>
+</div>
+</section>
 
-    </section>
     
     
-
-
     <!-- footer section -->
     <?php include('components/footer.php'); ?>
     
-
     
-
-
-
     <!-- Script -->
     <script src="./JS/script.js"></script>
 </body>

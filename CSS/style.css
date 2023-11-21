@@ -142,16 +142,6 @@ section{
     color:var(--black);
 }
 
-.empty{
-    border:var(--border);
-    padding:1.5rem;
-    text-align: center;
-    width: 100%;
-    font-size: 2rem;
-    text-transform: capitalize;
-    color:var(--red);
-}
-
 .flex-btn{
     display: flex;
     gap:1rem;
@@ -319,6 +309,15 @@ section{
     color: var(--white);
 }
 
+.empty{
+    border:var(--border);
+    padding:1.5rem;
+    text-align: center;
+    width: 100%;
+    font-size: 2rem;
+    text-transform: capitalize;
+    color:var(--red);
+}
 
 .products .box-container{
     display: grid;

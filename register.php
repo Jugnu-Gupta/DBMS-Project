@@ -10,7 +10,7 @@
         $user_id = '';
     }
 
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if(isset($_POST['submit'])){
         $name = $_POST['name'];
         $name = filter_var($name, FILTER_SANITIZE_STRING);
         $email = $_POST['email'];
@@ -95,7 +95,7 @@
             max="9999999999" maxlength="10">
             <input type="password" name="pass" required placeholder="Enter your password" class="box" maxlength="50"
                 oninput="this.value = this.value.replace(/\s/g, '')">
-                <input type="password" name="cpass" required placeholder="Confirm your password" class="box" maxlength="50"
+            <input type="password" name="cpass" required placeholder="Confirm your password" class="box" maxlength="50"
                 oninput="this.value = this.value.replace(/\s/g, '')">
             <input type="submit" value="Register Now" name="submit" class="btn">
             <p>already have an account? <a href="login.php">login now</a></p>

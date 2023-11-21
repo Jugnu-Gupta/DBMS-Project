@@ -9,6 +9,8 @@
     else{
         $user_id = '';
     }
+
+    include 'components/add_cart.php';
 ?>
 
 <!DOCTYPE html>
@@ -151,7 +153,7 @@
         ?>
     </div>
     <div class="more-btn">
-        <a href="menu.html" class="btn">veiw all</a>
+        <a href="menu.php" class="btn">Veiw All</a>
     </div>
     </section>
 

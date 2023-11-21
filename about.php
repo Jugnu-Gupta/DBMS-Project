@@ -39,9 +39,6 @@
 
 
 
-
-
-
     
     
     
@@ -63,7 +60,7 @@
             </div>
             
             <div class="content">
-                <h3>why choose us?</h3>
+                <h3>Why choose us?</h3>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, neque debitis incidunt qui ipsum
                     sed doloremque a molestiae in veritatis ullam similique sunt aliquam dolores dolore? Quasi atque
                     debitis nobis!</p>

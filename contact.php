@@ -9,6 +9,31 @@
     else{
         $user_id = '';
     }
+
+
+    if(isset($_POST['send'])){
+        $name = $_POST['name'];
+        $name = filter_var($name, FILTER_SANITIZE_STRING);
+        $email = $_POST['email'];
+        $email = filter_var($email, FILTER_SANITIZE_STRING);
+        $number = $_POST['number'];
+        $number = filter_var($number, FILTER_SANITIZE_STRING);
+        $msg = $_POST['msg'];
+        $msg = filter_var($msg, FILTER_SANITIZE_STRING);
+        
+        $sql = "SELECT * FROM messages WHERE name = '$name' AND email = '$email' AND number = '$number' AND message = '$msg'";
+        $select_message = mysqli_query($conn, $sql);
+        $select_message = mysqli_fetch_all($select_message, MYSQLI_ASSOC);
+        
+        if( count($select_message) > 0){
+            $message[] = 'Already sent message!';
+        }
+        else{
+            $sql = "INSERT INTO messages(user_id, name, email, number, message) VALUES('$user_id', '$name', '$email', '$number', '$msg');";
+            $insert_message = mysqli_query($conn, $sql);
+            $message[] = 'Sent message successfully!';
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -41,7 +66,6 @@
     
     
     
-
     <!-- heading sectiion -->
     <div class="heading">
         <h3>Contact us</h3>
@@ -50,7 +74,6 @@
 
 
     <!-- contact section -->
-    
     <section class="contact">
 
         <div class="row">
@@ -61,13 +84,13 @@
             
             <form action="" method="post">
                 <h3>tell us something!</h3>
-                <input type="text" name="name" maxlength="50" class="box" placeholder="enter your name" required>
-                <input type="number" name="number" min="0" max="9999999999" class="box" placeholder="enter your number"
+                <input type="text" name="name" maxlength="50" class="box" placeholder="Enter your name" required>
+                <input type="number" name="number" min="0" max="9999999999" class="box" placeholder="Enter your number"
                 required maxlength="10">
-                <input type="email" name="email" maxlength="50" class="box" placeholder="enter your email" required>
-                <textarea name="msg" class="box" required placeholder="enter your message" maxlength="500" cols="30"
+                <input type="email" name="email" maxlength="50" class="box" placeholder="Enter your email" required>
+                <textarea name="msg" class="box" required placeholder="Enter your message" maxlength="500" cols="30"
                 rows="10"></textarea>
-                <input type="submit" value="send message" name="send" class="btn">
+                <input type="submit" value="Send message" name="send" class="btn">
             </form>
 
         </div>

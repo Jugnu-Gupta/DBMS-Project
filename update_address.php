@@ -10,6 +10,16 @@
         $user_id = '';
         header('location:home.php');
     }
+
+    if(isset($_POST['submit'])){
+        $address = $_POST['flat_build'] .', '.$_POST['area_town'].', '. $_POST['city'] .', '. $_POST['state'] .', '. $_POST['country'] .' - '. $_POST['pin_code'];
+        $address = filter_var($address, FILTER_SANITIZE_STRING);
+        
+        $sql = "UPDATE users set address = '$address' WHERE id = '$user_id';";
+        $update_address = mysqli_query($conn, $sql);
+        
+        $message[] = 'Address saved!';
+    }
 ?>
 
 <!DOCTYPE html>
@@ -32,15 +42,8 @@
 </head>
 
 <body>
-
-
     <!-- header section -->
     <?php include('components/user_header.php'); ?>
-    
-    
-    
-    
-    
     
     
     
@@ -49,10 +52,8 @@
 
         <form action="" method="post">
             <h3>your address</h3>
-            <input type="text" class="box" placeholder="flat no." required maxlength="50" name="flat">
-            <input type="text" class="box" placeholder="building no." required maxlength="50" name="building">
-            <input type="text" class="box" placeholder="area name" required maxlength="50" name="area">
-            <input type="text" class="box" placeholder="town name" required maxlength="50" name="town">
+            <input type="text" class="box" placeholder="flat no. and building no." required maxlength="50" name="flat_build">
+            <input type="text" class="box" placeholder="area and town" required maxlength="50" name="area_town">
             <input type="text" class="box" placeholder="city name" required maxlength="50" name="city">
             <input type="text" class="box" placeholder="state name" required maxlength="50" name="state">
             <input type="text" class="box" placeholder="country name" required maxlength="50" name="country">
@@ -62,26 +63,15 @@
         </form>
         
     </section>
-
-
-    
     
     
     <!-- footer section -->
     <?php include('components/footer.php'); ?>
     
-
-
-
-        <div class="credits">created by <span>Jugnu Gupta</span> | all rights reserved</div>
-    </footer>
-
+    
     <div class="loader">
         <img src="images/loader.gif" alt="">
     </div>
-
-
-
 
     <!-- Script -->
     <script src="./JS/script.js"></script>

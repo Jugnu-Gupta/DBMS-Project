@@ -9,6 +9,8 @@
     else{
         $user_id = '';
     }
+
+    include 'components/add_cart.php';
 ?>
 
 <!DOCTYPE html>
@@ -68,17 +70,11 @@
     <?php
         }
     }else{
-        echo '<p class="empty">no products found!</p>';
+        echo '<p class="empty">No products found!</p>';
     }
     ?>
 
     </section>
-
-
-
-
-
-
 
 
 
@@ -92,13 +88,9 @@
 
 
 
-
-
-
     <div class="loader">
         <img src="images/loader.gif" alt="">
     </div>
-
 
 
     <!-- Swiper JS -->

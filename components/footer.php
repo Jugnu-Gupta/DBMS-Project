@@ -16,7 +16,7 @@
         <div class="box">
             <img src="images/map-icon.png" alt="">
             <h3>our address</h3>
-            <a href="#">Narela, delhi, india - 110040</a>
+            <a href="#">Flat No. 7, Bakauli village,<br> Narela, delhi - 110040</a>
         </div>
 
         <div class="box">

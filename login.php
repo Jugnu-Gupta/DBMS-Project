@@ -11,7 +11,7 @@
     }
 
 
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if(isset($_POST['submit'])){
         $email = $_POST['email'];
         $email = filter_var($email, FILTER_SANITIZE_STRING);
         $pass = $_POST['pass'];

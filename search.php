@@ -9,6 +9,8 @@
     else{
         $user_id = '';
     }
+
+    include 'components/add_cart.php';
 ?>
 
 <!DOCTYPE html>
@@ -46,14 +48,63 @@
     
     <section class="search-form">
         <form method="post" action="">
-            <input type="text" name="search_box" placeholder="search here..." class="box">
+            <input type="text" name="search_box" required placeholder="Search here..." 
+                maxlength="100" class="box">
             <button type="submit" name="search_btn" class="fas fa-search"></button>
         </form>
     </section>
     
-    <section class="products" style="min-height: 100vh; padding-top:0;"></section>
     
     
+<!-- home section -->
+<section class="products" style="padding-top:0px; min-height:50vh;">
+
+<div class="box-container">
+
+    <?php
+        if(isset($_POST['search_box']) OR isset($_POST['search_btn'])){
+        $search_box = $_POST['search_box'];
+
+        $sql = "SELECT * FROM products WHERE name LIKE '%{$search_box}%';";
+        $select_products = mysqli_query($conn, $sql);
+        $fetch_products = mysqli_fetch_all($select_products, MYSQLI_ASSOC);
+        if(count($fetch_products) > 0){
+            for($i = 0; $i < count($fetch_products); $i++){
+    ?>
+    <form action="" method="post" class="box">
+        <input type="hidden" name="pid" value="<?= $fetch_products[$i]['id']; ?>">
+        <input type="hidden" name="name" value="<?= $fetch_products[$i]['name']; ?>">
+        <input type="hidden" name="price" value="<?= $fetch_products[$i]['price']; ?>">
+        <input type="hidden" name="image" value="<?= $fetch_products[$i]['image']; ?>">
+        <a href="quick_view.php?pid=<?= $fetch_products[$i]['id']; ?>" class="fas fa-eye"></a>
+        <button type="submit" class="fas fa-cart-shopping" name="add_to_cart"></button>
+        <img src="uploaded_img/<?= $fetch_products[$i]['image']; ?>" alt="">
+        <a href="category.php?category=<?= $fetch_products[$i]['category']; ?>" class="cat"><?= $fetch_products[$i]['category']; ?></a>
+        <div class="name"><?= $fetch_products[$i]['name']; ?></div>
+        <div class="flex">
+        <div class="price"><span>$</span><?= $fetch_products[$i]['price']; ?></div>
+        <input type="number" name="qty" class="qty" min="1" max="99" value="1" maxlength="2">
+        </div>
+    </form>
+    <?php
+        }
+    }
+    else{
+        echo '<p class="empty">No products found!</p>';
+    }
+    }
+    ?>
+</div>
+</section>
+
+
+
+
+
+
+
+
+
 
 
     <!-- footer section -->
