@@ -10,7 +10,6 @@
     }
 ?>
 
-<!-- header section -->
 <header class="header">
     <section class="flex">
         <a href="home.php" class="logo">Food Dash 😋</a>
@@ -25,11 +24,11 @@
 
         <div class="icons">
             <?php
-                    $sql = "select * from cart where id = '$user_id';";
-                    $response = mysqli_query($conn, $sql);
-                    $count_user_cart_items = mysqli_fetch_all($response, MYSQLI_ASSOC);
-                    $total_user_cart_items = count($count_user_cart_items);
-                ?>
+                $sql = "SELECT * FROM cart WHERE user_id = '$user_id';";
+                $count_user_cart_items = mysqli_query($conn, $sql);
+                $count_user_cart_items = mysqli_fetch_all($count_user_cart_items, MYSQLI_ASSOC);
+                $total_user_cart_items = count($count_user_cart_items);
+            ?>
             <a href="search.php"><i class="fa-solid fa-magnifying-glass"></i></a>
             <a href="cart.php"><i class="fa-solid fa-cart-shopping"></i><span>(<?= $total_user_cart_items; ?>)</span></a>
             <div id="user-btn" onclick="userBtnClickHandler()" class="fa-solid fa-user"></div>

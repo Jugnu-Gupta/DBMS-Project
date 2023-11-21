@@ -102,11 +102,6 @@
     <?php include('components/footer.php'); ?>
     
 
-
-
-        <div class="credits">created by <span>Jugnu Gupta</span> | all rights reserved</div>
-    </footer>
-
     <div class="loader">
         <img src="images/loader.gif" alt="">
     </div>

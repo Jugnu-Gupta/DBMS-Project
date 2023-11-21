@@ -52,10 +52,6 @@
 </head>
 
 <body>
-
-
-
-
     <!-- header section -->
     <?php include('components/user_header.php'); ?>
     
@@ -64,7 +60,6 @@
     
     
     
-
     <!-- login section -->
     <section class="form-container">
 
@@ -72,7 +67,7 @@
             <h3>Login Now</h3>
             <input type="email" name="email" required placeholder="Enter your email" class="box" maxlength="50"
             oninput="this.value = this.value.replace(/\s/g, '')">
-            <input type="text" name="pass" required placeholder="Enter your password" class="box" maxlength="50"
+            <input type="password" name="pass" required placeholder="Enter your password" class="box" maxlength="50"
                 oninput="this.value = this.value.replace(/\s/g, '')">
             <input type="submit" value="login now" name="submit" class="btn">
             <p>don't have an account? <a href="register.php">register now</a></p>
@@ -81,20 +76,15 @@
     </section>
     
     
-
     
     <!-- footer section -->
     <?php include('components/footer.php'); ?>
     
-
-
     
     <div class="loader">
         <img src="images/loader.gif" alt="">
     </div>
-
     
-
     <!-- Script -->
     <script src="./JS/script.js"></script>
 </body>

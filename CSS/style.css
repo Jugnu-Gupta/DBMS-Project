@@ -473,7 +473,7 @@ section{
     gap: 1.5rem;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 3rem;
+    margin: 3rem 0rem;
     border: var(--border);
     padding: 1.5rem;
 }
