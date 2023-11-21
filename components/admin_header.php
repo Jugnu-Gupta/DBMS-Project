@@ -33,15 +33,15 @@ if(isset($message)){
 
       <div class="profile">
          <?php
-            $select_profile = $conn->prepare("SELECT * FROM `admin` WHERE id = ?");
-            $select_profile->execute([$admin_id]);
-            $fetch_profile = $select_profile->fetch(PDO::FETCH_ASSOC);
+            $sql = "SELECT * FROM admin WHERE id = '$admin_id';";
+            $select_profile = mysqli_query($conn, $sql);
+            $fetch_profile = mysqli_fetch_all($select_profile, MYSQLI_ASSOC);
          ?>
-         <p><?= $fetch_profile['name']; ?></p>
-         <a href="update_profile.php" class="btn">update profile</a>
+         <p><?= $fetch_profile[0]['name']; ?></p>
+         <a href="update_profile.php" class="btn">Update profile</a>
          <div class="flex-btn">
-            <a href="admin_login.php" class="option-btn">login</a>
-            <a href="register_admin.php" class="option-btn">register</a>
+            <a href="admin_login.php" class="option-btn">Login</a>
+            <a href="register_admin.php" class="option-btn">Register</a>
          </div>
          <a href="../components/admin_logout.php" onclick="return confirm('logout from this website?');" class="delete-btn">logout</a>
       </div>

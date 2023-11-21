@@ -23,9 +23,6 @@
     <!-- cdn -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-    <!-- custom css file link -->
-    <link rel="stylesheet" href="./CSS/style.css">
-
     <!-- font awesome cdn link -->
     <script src="https://kit.fontawesome.com/848e0df24d.js" crossorigin="anonymous"></script>
 </head>
@@ -195,9 +192,6 @@
     </div>
 
 
-    <!-- custom js file link  -->
-    <script src="js/script.js"></script>
-
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script>
@@ -222,6 +216,12 @@
             },
         });
     </script>
+
+        <!-- font awesome link -->
+        <script src="https://kit.fontawesome.com/848e0df24d.js" crossorigin="anonymous"></script>
+
+    <!-- custom js file link  -->
+    <script src="js/script.js"></script>
 </body>
 
 </html>

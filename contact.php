@@ -50,9 +50,6 @@
 
     <!-- custom css file link -->
     <link rel="stylesheet" href="./CSS/style.css">
-
-    <!-- font awesome cdn link -->
-    <script src="https://kit.fontawesome.com/848e0df24d.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -106,6 +103,8 @@
         <img src="images/loader.gif" alt="">
     </div>
 
+    <!-- font awesome link -->
+    <script src="https://kit.fontawesome.com/848e0df24d.js" crossorigin="anonymous"></script>
 
 
     <!-- Script -->
