@@ -87,11 +87,11 @@
                 <img src="uploaded_img/<?= $fetch_cart[$i]['image']; ?>" alt="">
                 <div class="name"><?= $fetch_cart[$i]['name']; ?></div>
                 <div class="flex">
-                    <div class="price"><span>$</span><?= $fetch_cart[$i]['price']; ?></div>
+                    <div class="price"><span>₹</span><?= $fetch_cart[$i]['price']; ?></div>
                     <input type="number" name="qty" class="qty" min="1" max="99" value="<?= $fetch_cart[$i]['quantity']; ?>" maxlength="2">
                     <button type="submit" class="fas fa-edit" name="update_qty"></button>
                 </div>
-                <div class="sub-total"> Sub total : <span>$<?= $sub_total = ($fetch_cart[$i]['price'] * $fetch_cart[$i]['quantity']); ?>/-</span> </div>
+                <div class="sub-total"> Sub total : <span>₹<?= $sub_total = ($fetch_cart[$i]['price'] * $fetch_cart[$i]['quantity']); ?>/-</span> </div>
             </form>
             <?php
                 $grand_total += $sub_total;
@@ -104,7 +104,7 @@
         </div>
 
         <div class="cart-total">
-            <p>Cart total : <span>$<?= $grand_total; ?></span></p>
+            <p>Cart total : <span>₹<?= $grand_total; ?></span></p>
             <a href="checkout.php" class="btn <?= ($grand_total > 0)?'':'disabled'; ?>">Proceed to checkout</a>
         </div>
 
@@ -120,8 +120,9 @@
     
     
     <!-- footer section -->
-    <?php include('components/footer.php'); ?>
-    
+    <footer class="footer">
+        <div class="credits">&copy; copyrights 2023 by <span>Jugnu Gupta</span> | all rights reserved</div>
+    </footer>
     
     <div class="loader">
         <img src="images/loader.gif" alt="">

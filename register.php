@@ -101,9 +101,9 @@
     
     
     <!-- footer section -->
-    <?php include('components/footer.php'); ?>
-    
-
+    <footer class="footer">
+        <div class="credits">&copy; copyrights 2023 by <span>Jugnu Gupta</span> | all rights reserved</div>
+    </footer>
 
 
 

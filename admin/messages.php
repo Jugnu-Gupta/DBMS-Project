@@ -51,10 +51,10 @@ if(isset($_GET['delete'])){
          for($i = 0; $i < count($fetch_messages); $i++){
    ?>
    <div class="box">
-      <p> name : <span><?= $fetch_messages[$i]['name']; ?></span> </p>
-      <p> number : <span><?= $fetch_messages[$i]['number']; ?></span> </p>
-      <p> email : <span><?= $fetch_messages[$i]['email']; ?></span> </p>
-      <p> message : <span><?= $fetch_messages[$i]['message']; ?></span> </p>
+      <p> Name : <span><?= $fetch_messages[$i]['name']; ?></span> </p>
+      <p> Number : <span><?= $fetch_messages[$i]['number']; ?></span> </p>
+      <p> Email : <span><?= $fetch_messages[$i]['email']; ?></span> </p>
+      <p> Message : <span><?= $fetch_messages[$i]['message']; ?></span> </p>
       <a href="messages.php?delete=<?= $fetch_messages[$i]['id']; ?>" class="delete-btn" onclick="return confirm('Delete this message?');">Delete</a>
    </div>
    <?php

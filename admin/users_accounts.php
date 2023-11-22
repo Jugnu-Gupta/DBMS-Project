@@ -77,9 +77,9 @@ if(isset($_GET['delete'])){
 
 
 
-<!-- font awesome link -->
-<script src="https://kit.fontawesome.com/848e0df24d.js" crossorigin="anonymous"></script>
 
+   <!-- font awesome cdn link -->
+   <script src="https://kit.fontawesome.com/848e0df24d.js" crossorigin="anonymous"></script>
 
 <!-- custom js file link  -->
 <script src="../js/admin_script.js"></script>

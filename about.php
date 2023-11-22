@@ -23,8 +23,8 @@
     <!-- cdn -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-    <!-- font awesome cdn link -->
-    <script src="https://kit.fontawesome.com/848e0df24d.js" crossorigin="anonymous"></script>
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 
 <body>
@@ -181,9 +181,9 @@
     
     
     <!-- footer section -->
-    <?php include('components/footer.php'); ?>
-    
-    
+    <footer class="footer">
+        <div class="credits">&copy; copyrights 2023 by <span>Jugnu Gupta</span> | all rights reserved</div>
+    </footer>
 
 
 
@@ -217,8 +217,8 @@
         });
     </script>
 
-        <!-- font awesome link -->
-        <script src="https://kit.fontawesome.com/848e0df24d.js" crossorigin="anonymous"></script>
+    <!-- font awesome cdn link -->
+    <script src="https://kit.fontawesome.com/848e0df24d.js" crossorigin="anonymous"></script>
 
     <!-- custom js file link  -->
     <script src="js/script.js"></script>

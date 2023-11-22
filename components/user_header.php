@@ -12,14 +12,14 @@
 
 <header class="header">
     <section class="flex">
-        <a href="home.php" class="logo">Food Dash</a>
+        <a href="home.php" class="logo"><b>Food Dash</b></a>
 
         <nav class="navbar">
-            <a href="home.php">home</a>
-            <a href="about.php">about</a>
-            <a href="menu.php">menu</a>
-            <a href="orders.php">order</a>
-            <a href="contact.php">contact</a>
+            <a href="home.php"><b>Home</b></a>
+            <a href="about.php"><b>About</b></a>
+            <a href="menu.php"><b>Menu</b></a>
+            <a href="orders.php"><b>Order</b></a>
+            <a href="contact.php"><b>Contact</b></a>
         </nav>
 
         <div class="icons">

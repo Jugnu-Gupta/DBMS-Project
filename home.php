@@ -30,12 +30,7 @@
 </head>
 
 <body>
-
-
-
     <?php include('components/user_header.php'); ?>
-
-
 
 
 
@@ -45,8 +40,8 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide slide">
                     <div class="content">
-                        <span>order online</span>
-                        <h3>delicious pizza</h3>
+                        <span>Order Online</span>
+                        <h3>Delicious pizza</h3>
                         <a href="menu.php" class="btn">See more</a>
                     </div>
                     <div class="image">
@@ -138,7 +133,7 @@
             <a href="category.php?category=<?= $fetch_products[$i]['category']; ?>" class="cat"><?= $fetch_products[$i]['category']; ?></a>
             <div class="name"><?= $fetch_products[$i]['name']; ?></div>
             <div class="flex">
-            <div class="price"><span>$</span><?= $fetch_products[$i]['price']; ?></div>
+            <div class="price"><span>₹</span><?= $fetch_products[$i]['price']; ?></div>
             <input type="number" name="qty" class="qty" min="1" max="99" value="1" maxlength="2">
             </div>
         </form>
@@ -158,16 +153,10 @@
 
 
 
-
-
-    <?php include('components/footer.php'); ?>
-
-
-
-
-
-
-
+    <!-- footer section -->
+    <footer class="footer">
+        <div class="credits">&copy; copyrights 2023 by <span>Jugnu Gupta</span> | all rights reserved</div>
+    </footer>
 
 
     <div class="loader">
@@ -210,7 +199,6 @@
 
     <!-- font awesome link -->
     <script src="https://kit.fontawesome.com/848e0df24d.js" crossorigin="anonymous"></script>
-
 
     <!-- custom js file link -->
     <script src="./JS/script.js"></script>
